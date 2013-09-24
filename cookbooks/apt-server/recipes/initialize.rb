@@ -13,6 +13,7 @@ service 'nginx' do
 end
 package 'dpkg-dev'
 directory "/usr/share/nginx/www/deb_repo/binary" do
+  recursive true
   owner "ubuntu"
   group "ubuntu"
   mode 0755
