@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   end
 
 
-  config.vm.define "chef_server" do |node|
+  config.vm.define "repo" do |node|
     node.vm.box = "base"
     node.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
 
@@ -20,8 +20,7 @@ Vagrant.configure("2") do |config|
       chef.cookbooks_path = "cookbooks"
       chef.roles_path = "roles"
       chef.data_bags_path = "data_bags"
-      chef.add_recipe "apt-server::default"
-      chef.add_recipe "chef-server::default"
+      chef.add_role "repo"
     end
   end
 
