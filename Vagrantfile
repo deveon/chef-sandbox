@@ -13,13 +13,14 @@ Vagrant.configure("2") do |config|
 
 
   config.vm.define "repo" do |node|
-    node.vm.box = "base"
+    node.vm.box = "ubuntu-precise-12.04.3-lts"
     node.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
 
     node.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = "cookbooks"
       chef.roles_path = "roles"
       chef.data_bags_path = "data_bags"
+
       chef.add_role "repo"
     end
   end
