@@ -7,14 +7,14 @@ Vagrant.configure("2") do |config|
 
   config.vm.network :private_network, ip: "33.33.33.10"
 
-  config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+  config.vm.provider :virtualbox do |provider|
+    provider.customize ["modifyvm", :id, "--memory", "1024"]
+    config.vm.box = "ubuntu-precise-12.04.3-lts"
+    config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
   end
 
 
   config.vm.define "repo" do |node|
-    node.vm.box = "ubuntu-precise-12.04.3-lts"
-    node.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
 
     node.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = "cookbooks"
