@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   end
 
 
-  config.vm.define "repo" do |node|
+  config.vm.define "apt_server_node" do |node|
 
     node.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = "cookbooks"
