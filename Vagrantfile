@@ -38,4 +38,26 @@ Vagrant.configure("2") do |config|
     end
   end
 
+  config.vm.define :logstash_client_node do |node|
+     node.vm.network :private_network, ip: "33.33.33.13"
+     node.vm.provision :chef_solo do |chef|
+     chef.cookbooks_path    = 'cookbooks'
+     chef.log_level         = :debug
+     chef.roles_path = "roles"
+     chef.add_role "logstashagent"
+
+    end
+  end
+
+    config.vm.define :logstash_server_node do |node|
+      node.vm.network :private_network, ip: "33.33.33.14"
+      node.vm.provision :chef_solo do |chef|
+      chef.cookbooks_path    = 'cookbooks'
+      chef.log_level         = :debug
+      chef.roles_path = "roles"
+      chef.add_role "logstashserver"
+
+    end
+  end
+
 end
