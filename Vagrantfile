@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
 
 
   config.vm.provider :virtualbox do |provider|
-    provider.customize ["modifyvm", :id, "--memory", "1024"]
+    provider.customize ["modifyvm", :id, "--memory", "1524"]
     config.vm.box = "ubuntu-precise-12.04.3-lts"
     config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
   end
