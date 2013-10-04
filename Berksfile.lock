@@ -9,6 +9,9 @@
     "apt-server": {
       "path": "./cookbooks/apt-server"
     },
+    "utilities": {
+      "path": "./cookbooks/utilities"
+    },
     "elasticsearch": {
       "locked_version": "0.3.4"
     },

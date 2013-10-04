@@ -12,4 +12,4 @@ default_attributes(
   "elasticsearch" => {"allocated_memory" => "128m"}
 )
 
-run_list 'recipe[elasticsearch]', 'recipe[logstash::server]', 'recipe[logstash::kibana]'
+run_list 'recipe[elasticsearch]', 'recipe[utilities::restart_elasticsearch]', 'recipe[utilities::restart_elasticsearch]', 'recipe[logstash::server]', 'recipe[logstash::kibana]', 'recipe[utilities::restart_kibana]'
