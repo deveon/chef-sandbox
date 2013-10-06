@@ -5,10 +5,10 @@ description 'logstash agent'
 default_attributes(
   "logstash" => { 
     "agent" => {
-      "server_ipaddress"=>"33.33.33.14",
+      "server_ipaddress"=>"10.123.61.11",
       "outputs" => [
         "redis" => {
-          "host" => "33.33.33.14",
+          "host" => "10.123.61.11",
           "data_type" => "list",
           "key" => "logstash"
         }

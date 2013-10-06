@@ -4,5 +4,5 @@ description 'basic software'
 run_list 'recipe[rsyslog::client]'
 
 default_attributes(
-  "rsyslog" => { "server_ip" => "33.33.33.12" }
+  "rsyslog" => { "server_ip" => "10.123.61.1" }
 )

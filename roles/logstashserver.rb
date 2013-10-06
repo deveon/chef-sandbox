@@ -37,5 +37,4 @@ default_attributes(
   }
 )
 
-#run_list 'recipe[redisio::install]', 'recipe[redisio::enable]', 'recipe[utilities::restart_redis_server]', 'recipe[elasticsearch]', 'recipe[utilities::restart_elasticsearch]', 'recipe[logstash::server]', 'recipe[logstash::kibana]', 'recipe[utilities::restart_kibana]'
 run_list 'recipe[redisio::install]', 'recipe[redisio::enable]', 'recipe[elasticsearch]', 'recipe[utilities::restart_elasticsearch]', 'recipe[logstash::server]', 'recipe[logstash::kibana]', 'recipe[utilities::restart_kibana]'
