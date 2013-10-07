@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
 
 
   config.vm.provider :virtualbox do |provider|
-    provider.customize ["modifyvm", :id, "--memory", "1500"]
+    provider.customize ["modifyvm", :id, "--memory", "1100"]
     config.vm.box = "ubuntu-precise-12.04.3-lts"
     config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
   end
@@ -43,7 +43,6 @@ Vagrant.configure("2") do |config|
   end
 =end
 
-  # Reload this node with 1500MB RAM
   config.vm.define :logstash_server_node do |node|
     node.vm.network :private_network, ip: "10.123.61.11"
     node.vm.network "forwarded_port", guest: 8050, host: 8050
