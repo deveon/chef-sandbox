@@ -17,4 +17,4 @@ default_attributes(
   }
 )
 
-run_list 'recipe[logstash::agent]' 
+run_list  'recipe[apt::default]', 'recipe[logstash::agent]' 
