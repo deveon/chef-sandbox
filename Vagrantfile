@@ -76,5 +76,15 @@ Vagrant.configure("2") do |config|
     end
   end
 
+  config.vm.define :dir_s3_backup_node do |node|
+    node.vm.network :private_network, ip: "10.123.61.31"
+    node.vm.provision :chef_solo do |chef|
+      chef.cookbooks_path    = 'cookbooks'
+      chef.log_level         = :debug
+      chef.roles_path = "roles"
+      chef.add_role "dir_s3_backup"
+    end
+  end
+
 
 end

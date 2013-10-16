@@ -22,22 +22,34 @@
       "locked_version": "1.7.0"
     },
     "graylog2": {
-      "locked_version": "0.1.0"
+      "path": "./cookbooks/graylog2"
+    },
+    "s3cmd": {
+      "path": "./cookbooks/chef-s3cmd"
+    },
+    "dir_s3_sync": {
+      "path": "./cookbooks/dir_s3_sync"
+    },
+    "cron": {
+      "locked_version": "1.2.8"
     },
     "build-essential": {
       "locked_version": "1.4.2"
     },
     "xml": {
-      "locked_version": "1.1.2"
+      "locked_version": "1.2.0"
     },
     "java": {
-      "locked_version": "1.13.0"
+      "locked_version": "1.14.0"
     },
     "windows": {
-      "locked_version": "1.10.0"
+      "locked_version": "1.11.0"
     },
     "chef_handler": {
       "locked_version": "1.1.4"
+    },
+    "aws": {
+      "locked_version": "0.101.6"
     },
     "monit": {
       "locked_version": "0.7.1"
@@ -49,19 +61,19 @@
       "locked_version": "2.0.0"
     },
     "yum": {
-      "locked_version": "2.3.2"
+      "locked_version": "2.3.4"
     },
     "apt": {
-      "locked_version": "2.2.0"
+      "locked_version": "2.2.1"
     },
     "apache2": {
-      "locked_version": "1.7.0"
+      "locked_version": "1.8.4"
     },
     "php": {
-      "locked_version": "1.2.4"
+      "locked_version": "1.2.6"
     },
     "mysql": {
-      "locked_version": "3.0.6"
+      "locked_version": "3.0.12"
     },
     "openssl": {
       "locked_version": "1.1.0"
@@ -70,10 +82,10 @@
       "locked_version": "2.7.0"
     },
     "dmg": {
-      "locked_version": "2.0.2"
+      "locked_version": "2.0.4"
     },
     "runit": {
-      "locked_version": "1.2.0"
+      "locked_version": "1.3.0"
     },
     "rbenv": {
       "locked_version": "1.6.5"
@@ -91,7 +103,7 @@
       "locked_version": "1.4.0"
     },
     "rabbitmq": {
-      "locked_version": "2.3.0"
+      "locked_version": "2.3.2"
     },
     "erlang": {
       "locked_version": "1.3.2"
