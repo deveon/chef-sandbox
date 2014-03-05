@@ -5,6 +5,38 @@ Every Chef installation needs a Chef Repository. This is the place where cookboo
 
 While we prefer Git, and make this repository available via GitHub, you are welcome to download a tar or zip archive and use your favorite version control system to manage the code.
 
+Getting Started
+===============
+
+# bundle gems and install cookbooks
+$ bundle install
+$ berks install
+
+# setup and configure chef keys
+$ mkdir .chef
+
+# create chef-validator
+$ openssl genrsa -out .chef/chef-validator.pem 2048
+$ openssl rsa -in .chef/chef-validator.pem -pubout > .chef/chef-validator.pub
+
+# create client key
+$ openssl genrsa -out .chef/client.pem 2048
+$ openssl rsa -in .chef/client.pem -pubout > .chef/client.pub
+
+# configure knife
+$ vim .chef/knife.rb
+```
+current_dir = File.dirname(__FILE__)
+log_level                :info
+log_location             STDOUT
+node_name                'yourname'
+client_key               "#{current_dir}/client.pem"
+validation_client_name   'chef-validator'
+validation_key           "#{current_dir}/chef-validator.pem"
+chef_server_url          'https://localhost:443'
+```
+
+
 Repository Directories
 ======================
 
