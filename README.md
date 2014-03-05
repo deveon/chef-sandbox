@@ -8,22 +8,22 @@ While we prefer Git, and make this repository available via GitHub, you are welc
 Getting Started
 ===============
 
-# bundle gems and install cookbooks
+#### bundle gems and install cookbooks
 $ bundle install
 $ berks install
 
-# setup and configure chef keys
+#### setup and configure chef keys
 $ mkdir .chef
 
-# create chef-validator
+#### create chef-validator
 $ openssl genrsa -out .chef/chef-validator.pem 2048
 $ openssl rsa -in .chef/chef-validator.pem -pubout > .chef/chef-validator.pub
 
-# create client key
+#### create client key
 $ openssl genrsa -out .chef/client.pem 2048
 $ openssl rsa -in .chef/client.pem -pubout > .chef/client.pub
 
-# configure knife
+#### configure knife
 $ vim .chef/knife.rb
 ```
 current_dir = File.dirname(__FILE__)
