@@ -16,12 +16,12 @@ $ berks install
 $ mkdir .chef
 
 #### create chef-validator
-$ openssl genrsa -out .chef/chef-validator.pem 2048
-$ openssl rsa -in .chef/chef-validator.pem -pubout > .chef/chef-validator.pub
+$ openssl genrsa -out .chef/chef-validator.pem 2048  
+$ openssl rsa -in .chef/chef-validator.pem -pubout > .chef/chef-validator.pub  
 
 #### create client key
-$ openssl genrsa -out .chef/client.pem 2048
-$ openssl rsa -in .chef/client.pem -pubout > .chef/client.pub
+$ openssl genrsa -out .chef/client.pem 2048  
+$ openssl rsa -in .chef/client.pem -pubout > .chef/client.pub  
 
 #### configure knife
 $ vim .chef/knife.rb
