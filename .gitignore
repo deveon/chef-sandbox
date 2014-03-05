@@ -3,10 +3,9 @@
 ###
 # Ignore Chef key files and secrets
 ###
-.chef/*.pem
+.chef/*
 .chef/encrypted_data_bag_secret
 *.swp
 *.swo
-
 
 .vagrant/
