@@ -9,11 +9,11 @@ Getting Started
 ===============
 
 #### bundle gems and install cookbooks
-$ bundle install
-$ berks install
+$ bundle install  
+$ berks install  
 
 #### setup and configure chef keys
-$ mkdir .chef
+$ mkdir .chef  
 
 #### create chef-validator
 $ openssl genrsa -out .chef/chef-validator.pem 2048  
@@ -24,7 +24,7 @@ $ openssl genrsa -out .chef/client.pem 2048
 $ openssl rsa -in .chef/client.pem -pubout > .chef/client.pub  
 
 #### configure knife
-$ vim .chef/knife.rb
+$ vim .chef/knife.rb  
 ```
 current_dir = File.dirname(__FILE__)
 log_level                :info
