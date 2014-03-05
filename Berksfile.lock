@@ -1,1 +1,7 @@
-cookbook 'apt', :locked_version => '2.2.0'
+{
+  "sources": {
+    "apt": {
+      "locked_version": "2.2.0"
+    }
+  }
+}
